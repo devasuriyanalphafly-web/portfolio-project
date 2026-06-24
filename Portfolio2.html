@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Designer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="portfolio2.css">
+
+
+</head>
+<body>
+
+<nav>
+  <h2>Deva Surya</h2>
+  <ul>
+    <div class="menu-toggle">☰</div>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="cursor-glow"></div>
+
+<section class="hero" id="home">
+  <h1>I am a <span>Creative Full Stack Developer</span></h1>
+  <p>
+  I create <span class="highlight">interactive</span> and 
+  <span class="highlight">modern</span> web experiences with 
+  strong design and motion.
+</p>
+
+  <p>I am, <span class="highlight">a passionate full stack developer </span> who enjoys creating
+     clean and responsive websites. I have a strong interest in learning
+     modern web technologies and improving my development skills.
+  </p>
+  <a href="https://drive.google.com/file/d/19Hc6HxtTrMiIxJzd-YOOmwiwATl_9DmL/view?usp=sharing" target="_blank" class="btn resume-btn">
+    <i class="fa-solid fa-file-lines"></i>
+  View Resume
+</a>
+
+</section>
+
+<section id="about">
+
+<div class="about-content">
+
+  <h3 class="about-title">
+    From <span class="highlight">Physics</span> to 
+    <span class="highlight">Pixels</span>
+  </h3>
+
+  <div class="about-box">
+    <p>
+      I completed my <strong>B.Sc in Physics</strong>, where I mastered logical thinking, structured problem-solving, and analytical reasoning.
+    </p>
+  </div>
+
+  <div class="about-box">
+    <p>
+      Today, I’m transforming that scientific mindset into the world of 
+      <span class="highlight">Web Development</span> — building modern, interactive and impactful digital experiences.
+    </p>
+  </div>
+
+  <div class="about-box">
+    <p>
+      As a <span class="highlight">Fast Learner</span>, I quickly adapt to new tools and technologies.  
+      With strong <span class="highlight">Communication Skills</span>, I collaborate effectively and understand real-world project needs.
+    </p>
+  </div>
+
+  <div class="about-box">
+    <p class="about-quote">
+      “I don’t just write code — I design experiences.”
+    </p>
+  </div>
+
+</div>
+
+</section>
+
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card frontend">
+      <h4>Frontend</h4>
+      <p>HTML, CSS, JavaScript, Animation</p>
+    </div>
+    <div class="skill-card backend">
+      <h4>Backend</h4>
+      <p>Node.js, Express.js</p>
+    </div>
+    <div class="skill-card creative-ui">
+      <h4>Creative UI</h4>
+      <p>UI Design, Motion Effects</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project">
+      <img src="https://picsum.photos/400/300?1">
+    </div>
+    <div class="project">
+      <img src="https://picsum.photos/400/300?2">
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+© 2026 Deva Surya | Creative Designer
+</footer>
+
+<script>
+/* Scroll Reveal */
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+},{threshold:0.2});
+
+sections.forEach(section=>{
+  observer.observe(section);
+});
+</script>
+
+</script>
+
+<script>
+
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+
+     toggle.addEventListener("click", () => {
+     navLinks.classList.toggle("show");
+    });
+
+</script>
+
+<script>
+  const glow = document.querySelector(".cursor-glow");
+
+  document.addEventListener("mousemove", (e) => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  });
+</script>
+
+
+</body>
+</html>
